@@ -33,8 +33,6 @@ const IndexPage: React.FC<PageProps> = (): JSX.Element => {
     }
   );
 
-  console.log("data", data);
-
   const onGetNewActivityButtonClick = (): void => {
     mutate();
   };
