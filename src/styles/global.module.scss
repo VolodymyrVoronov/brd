@@ -1,0 +1,25 @@
+html,
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+body {
+  font-family: "Fredericka the Great", cursive;
+
+  background: #77a1d3;
+  background: -webkit-linear-gradient(to left, #e684ae, #79cbca, #77a1d3);
+  background: linear-gradient(to left, #e684ae, #79cbca, #77a1d3);
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --white: #ffffff;
+  --black: #000000;
+}

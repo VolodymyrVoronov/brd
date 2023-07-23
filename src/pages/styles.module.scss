@@ -1,0 +1,115 @@
+.root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  height: 100vh;
+  width: 100vw;
+}
+
+.activity {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  max-width: 768px;
+}
+
+.activityName {
+  font-size: 48px;
+  line-height: 48px;
+  text-align: center;
+  text-decoration: underline;
+  text-wrap: balance;
+}
+
+.activityIcon {
+  width: 150px;
+
+  margin-top: 50px;
+}
+
+.activityType {
+  margin-top: 25px;
+
+  font-size: 24px;
+  line-height: 24px;
+  text-transform: capitalize;
+}
+
+.activityTable {
+  width: 100%;
+
+  margin-top: 25px;
+
+  border-spacing: 0;
+  border-collapse: collapse;
+
+  tr,
+  td {
+    width: 33.33%;
+
+    padding: 20px;
+
+    font-size: 24px;
+    line-height: 24px;
+    text-align: center;
+
+    border: 1px solid var(--black);
+  }
+}
+
+.activityTableRow {
+  td {
+    padding: 10px;
+
+    font-size: 18px;
+    line-height: 18px;
+    text-align: center;
+  }
+}
+
+.activityTableIcon {
+  width: 50px;
+
+  margin: 0 5px;
+}
+
+.button {
+  position: absolute;
+
+  bottom: 10px;
+  right: 50%;
+  transform: translateX(50%);
+
+  padding: 10px 20px;
+
+  font-size: 26px;
+  line-height: 26px;
+
+  color: var(--black);
+
+  background: transparent;
+  border: 1px solid var(--black);
+
+  transition: all 0.3s ease;
+
+  &:hover {
+    cursor: pointer;
+
+    background: var(--black);
+    color: var(--white);
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+  }
+
+  &:disabled:hover {
+    background: transparent;
+    color: var(--black);
+  }
+}
