@@ -4,12 +4,13 @@ import * as React from "react";
 import useSWR from "swr";
 
 import fetcher from "../helpers/fetcher";
+import getAccessibility from "../helpers/getAccessibility";
+import getParticipants from "../helpers/getParticipants";
+import getPrice from "../helpers/getPrice";
 
 import "normalize.css";
 import "../styles/global.module.scss";
 
-import getAccessibility from "../helpers/getAccessibility";
-import getParticipants from "../helpers/getParticipants";
 import * as styles from "./styles.module.scss";
 
 interface IActivityResponse {
@@ -103,16 +104,14 @@ const IndexPage: React.FC<PageProps> = (): JSX.Element => {
                     )}
                   </td>
                   <td>
-                    {[...Array(getParticipants(data?.participants)).keys()].map(
-                      (i) => (
-                        <img
-                          key={i}
-                          className={styles.activityTableIcon}
-                          src="../../price.png"
-                          alt="Price"
-                        />
-                      )
-                    )}
+                    {[...Array(getPrice(data?.price)).keys()].map((i) => (
+                      <img
+                        key={i}
+                        className={styles.activityTableIcon}
+                        src="../../price.png"
+                        alt="Price"
+                      />
+                    ))}
                   </td>
                 </tr>
               </tbody>
